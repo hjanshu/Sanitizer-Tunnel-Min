@@ -72,11 +72,11 @@ int prevSec;
 int cursor = 0;
 
 int currMotor = 1;
-#define trigPin 0
-#define sensorPin 13
+#define trigPin 13
+#define sensorPin 0
 #define motor1Pin 11
 #define buzzerPin 12
-#define uvTrigPin A1
+#define uvTrigPin 10
 #define resetPin A4
 
 #define countAddr 0
@@ -129,10 +129,10 @@ void setup()
 
   lcd.begin(16, 2);
 
-  /* {
-    EEPROM.update(i, 0);
-  }
-   */
+  //  for (int i =0; i<1024; i++)
+  //   {
+  //    EEPROM.update(i, 0);
+  //  }
 
   if (!rtc.begin())
   {
